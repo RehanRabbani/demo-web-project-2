@@ -166,9 +166,9 @@
               <form>
                     <div class="drp-down">
                             <div>
-                                    <div class="form-group" >
+                                    <div class="form-group" onchange="updateChartType()">
                                            
-                                            <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()" onchange="updateChartType()">
+                                            <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()" >
                                               <option value="pie">PILPRES</option>
                                               <option value="bar">PILEG DPR</option>
                                               <option>PILEG DPRD PROVINSI</option>
@@ -182,7 +182,7 @@
                                           function myfunc(){
                                             var e = document.getElementById("exampleFormControlSelect1");
                                                  strUser = e.options[e.selectedIndex].value;
-                                                console.log(strUser);
+                                                console.log(strUser +"h");
                                         //         if(strUser==="PILPRES"){
                                         //                 document.getElementById('exampleFormControlSelect1').innerHTML+=`
                                         //                 <div class="form-group">
@@ -197,10 +197,27 @@
                                         //  </div>
                                         //                 `
                                         //         }
-                                                if(strUser==="line"){
-                                                    chartv="bar";
+                                                if(strUser ==="bar"){
+                                                    
                                                     document.getElementById('form-three').style.display="none";
-                                                    document.getElementById('one').innerHTML+=`
+                                                    document.getElementById('one').innerHTML=`
+                                                        <div class="form-group">
+                                           
+                                                                <select class="form-control" id="exampleFormControlSelect3">
+                                                                        <option>ACEH</option>
+                                                                        <option>SUMTERA UTARA</option>
+                                                                        <option>SUMTERA BARAT</option>
+                                                                        <option>RIAU</option>
+                                                                        <option>JAMBI</option>
+                                                                      </select>
+                                         </div>
+                                                        `
+                                                       
+                                               }
+                                               if(strUser ==="pie"){
+                                                    
+                                                    document.getElementById('form-three').style.display="none";
+                                                    document.getElementById('one').innerHTML=`
                                                         <div class="form-group">
                                            
                                            <select class="form-control" id="exampleFormControlSelect2">
