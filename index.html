@@ -171,8 +171,8 @@
                                             <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()" >
                                               <option value="pie">PILPRES</option>
                                               <option value="bar">PILEG DPR</option>
-                                              <option>PILEG DPRD PROVINSI</option>
-                                              <option>PILEG DPRd KAB/KOTA</option>
+                                              <option value="pileg">PILEG DPRD PROVINSI</option>
+                                              <option value="kota">PILEG DPRd KAB/KOTA</option>
                                               <option>PEMILU DPD</option>
                                             </select>
                                           </div>
@@ -203,6 +203,23 @@
                                                     document.getElementById('one').innerHTML=`
                                                         <div class="form-group">
                                            
+                                                             
+                                                                      <select class="form-control" id="exampleFormControlSelect2">
+                                             <option>WILAYAH</option>
+                                             <option>DAPIL</option>
+                                             
+                                           
+                                           </select>
+                                         </div>
+                                                        `
+                                                       
+                                               }
+                                               if(strUser ==="pie"){
+                                                    
+                                                    document.getElementById('form-three').style.display="none";
+                                                    document.getElementById('one').innerHTML=`
+                                                        <div class="form-group">
+                                           
                                                                 <select class="form-control" id="exampleFormControlSelect3">
                                                                         <option>ACEH</option>
                                                                         <option>SUMTERA UTARA</option>
@@ -214,22 +231,34 @@
                                                         `
                                                        
                                                }
-                                               if(strUser ==="pie"){
+                                               if(strUser ==="pileg" || strUser==="kota"){
                                                     
                                                     document.getElementById('form-three').style.display="none";
                                                     document.getElementById('one').innerHTML=`
+                                                    <div class="form-group">
+                                           
+                                                             
+                                           <select class="form-control" id="exampleFormControlSelect2">
+                  <option>WILAYAH</option>
+                  <option>DAPIL</option>
+                  
+                
+                </select>
+              </div>
                                                         <div class="form-group">
                                            
-                                           <select class="form-control" id="exampleFormControlSelect2">
-                                             <option>WILAYAH</option>
-                                             <option>DAPIL</option>
-                                             
-                                           
-                                           </select>
+                                                                <select class="form-control" id="exampleFormControlSelect3">
+                                                                        <option>ACEH</option>
+                                                                        <option>SUMTERA UTARA</option>
+                                                                        <option>SUMTERA BARAT</option>
+                                                                        <option>RIAU</option>
+                                                                        <option>JAMBI</option>
+                                                                      </select>
                                          </div>
                                                         `
                                                        
                                                }
+                                             
                                                
                                           }
                                           </script>
