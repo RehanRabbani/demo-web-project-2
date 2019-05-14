@@ -10,280 +10,322 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <style>
+
     body{
         height: 100%;
     }
-    .size{
-        font-size: 2rem;
+    .navbar{
+        justify-content: flex-start !important;
+        flex-wrap: nowrap;
     }
- li{
-     list-style-type: none;
- }
- .navbar{
-     justify-content: flex-start !important;
-    
- }
- .highlight{
-     border: 1px solid;
- }
- .dropdown-border{
-     border-bottom: 5px solid;
- }
- .dropdown-item{
-     width: 90%;
-     margin-left: 6px;
- }
- .second-container{
-     background-image: url('first.png');
-     height: 470px;
-     width: 100%;
-     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-
-
-
- }
- .third-container{
+    .size{
+        font-size: 1.25rem;
+    }
+    .drp-down{
+        
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ced4da;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-radius: 5px;
+        
+    }
+    .drp-down>div{
+        width: 400px;
+        
+        
+    }
+    .con-size
+    {
+        width: 70%;
+        height: 200px;
+    }
+    .chart-style{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chart-style >h3{
+        text-align: center;
+        background-color: rgb(46, 75, 75);
+        color: white;
+        border-radius: 5px;
+    }
+    .chart-style>p:nth-child(3){
+        background-color: rgb(46, 75, 75);
+        font-size: 0.725rem;
+        color: white;
+    }
+    .table-style{
+        margin-top: 20rem;
+    }
+    .table-style>p:first-child{
+        background-color:  rgb(46, 75, 75);
+        font-size: 0.725rem;
+        color: white;
+    }
+    thead{
+        background-color: rgb(25, 41, 41);
+    color: white;
+    }
+    .third-container{
      height: 50px;
      width: 100%;
      padding-left: 250px;
     padding-right: 250px;
      /* background-color: palevioletred; */
  }
- .footer-style>.third-container{
-    padding-left: 700px;
-    padding-right: 700px;
- }
  .third-container>span>hr{
      background-color: yellow;
      
  }
- .fourth-container{
-     height: 150px;
-     width: 100%;
-     display: flex;
+ footer{
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: black;
+    color: white;
     align-items: center;
  }
- .fifth-container{
- 
- display: flex;
- flex-wrap: wrap;
+ footer>span{
+     background-color: black !important;
+     height: 20px;
+    width: 143px;
  }
- .fifth-container>section{
-     width: 50%;
-     height: 720px;
+ footer>span>hr{
+     background-color: white;
  }
- .fifth-one{
- background-color: paleturquoise;
-
+ .dis-style{
+     display: flex;
+     flex-direction: column;
+    
+     border: 1px solid;
+    
+     margin-left: 1.25rem;
+     margin-right: 1.25rem;
+     margin-bottom: 0.5rem;
+     border-radius: 5px;
+     border: 1px solid #ced4da;
  }
- .fifth-two{
-    background-color: plum;
-
- 
+ .dis-style>span>h3{
+     text-align: center;
+     height: 60px;
+     
  }
- .table{
-     width: 80%;
-     margin-left: 2.5rem;
+ .dis-style>span>p{
+     padding-left: 1rem;
  }
- .footer-style{
-     background-image: url('second.png');
-     height: 570px;
-     width: 100%;
-     background-position: center;
-     background-size: contain;
-     margin-top: 2rem;
+ .bg-light{
+     background-color: #ffc107 !important;
  }
- /* small screen */
- @media only screen and (max-width: 600px) {
-    .dropdown-menu.show{
-        width: 191%;
+ .btn-outline-warning{
+     color: black;
+     border-color: white;
+ }
+    @media only screen and (max-width: 600px) {
+        .drp-down{
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            width: 90%;
+        }
+        .table-style{
+        margin-top: 0rem;
     }
-    .third-container{
-        padding-left: 100px;
-    padding-right: 100px;
-    }
-    .fifth-container>section{
-        width: 500px;
-    }
+    .drp-down>div {
+    width: 300px;
 }
+.chart-style{
+    width: 90%;
+    margin-left: 1rem;
+   
+}
+.dis-style{
+    width: 90%;
+    margin-left: 1.25rem;
+}
+    }
 </style>
 </head>
-
 <body>
-    
-        
         <nav class="navbar sticky-top navbar-light bg-light">
                 <span class="size"><i class="fas fa-archway"></i></span>
-                <a class="navbar-brand" href="index.html">Komisi Pemilihan Umum</a>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          jENIS PEMILIHAN
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  
-                                <a class="dropdown-item highlight" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                  <hr>
-                          <a class="dropdown-item highlight" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          
-                        </div>
-                        
-                      </li>
+               <span> <a class="navbar-brand" href="#">Komisi Pemilihan Umum</a></span>
+               
+                <button type="button" class="btn btn-outline-warning">Reset Filter</button>
               </nav>
-            <div class="second-container">
-                   <h3> PORTAL PUBLIKASI</h3>
-                    <h3>PILKADA DAN PEMILU</h3>
-                <h3>INDONESIA</h3>
-            </div>
-             
-            <div class="fifth-container">
-                   <section class="fifth-one">
-                        <div class="third-container">
-                                <span><hr></span> 
-                 
-                             </div>
-                             <div class="fourth-container">
-                                 <h3>Tahapan</h3>
-                                 <h3>Pilkada</h3>
-                                 <p>Tahapan pada Pilkada 2018</p>
-                                 <h4></h4>
-                             </div>
+              <form>
+                    <div class="drp-down">
+                            <div>
+                                    <div class="form-group">
+                                           
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>PILPRES</option>
+                                              <option>PILEG DPR</option>
+                                              <option>PILEG DPRD PROVINSI</option>
+                                              <option>PILEG DPRd KAB/KOTA</option>
+                                              <option>PEMILU DPD</option>
+                                            </select>
+                                          </div>
+                            </div>
+                            <div>
+                                    <div class="form-group">
+                                           
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>Hitung Suara</option>
+                                              <option>Rekapitulasi Hasil Pemilu</option>
+                                              <option>Penetapan Hasil Pemilu</option>
+                                              <option>Daftar Sengketa</option>
+                                            
+                                            </select>
+                                          </div>
+                            </div>
+                            <div>
+                                    <div class="form-group">
+                                           
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>AcEH</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                          </div>
+                            </div>
+                        </div>
+                   
+                   
+                  </form>
+                  <div class="chart-style">
+                    <h3>HASIL HITUNG SUARA PEMILU PRESIDEN & WAKIL PRESIDEN RI 2019 </h3>
+                    <p>TINGKAT NASIONAL</p>
+                    <p>Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS (81.81361%)</p>
+                   <div class="con-size"> <canvas id="myChart"></canvas></div>
+                    <script>
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'pie',
+                        responsive: true,
+                        data: {
+                            labels: ['Red', 'Blue'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                   
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                   
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                    </script>
+                  </div>
+                <div class="table-style">
+                        <p>Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS (81.81361%)</p>
                         <table class="table">
                                 <thead>
-                                   <tr>
-                                        <th colspan="2">Tahap Persiapan</th>
-                                        <th></th>
-                                   </tr>
+                                 
                                   <tr>
                                   
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">WILAYAH</th>
+                                    <th scope="col">(01) Ir.H.JOKO WIDODO-Pro.DR.(H.C) Kh MARUF AMIN</th>
+                                    <th scope="col">(02) PRABOWO SUBIANTO-H.SANDIAGA SALAHUDIN UNO</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                    
                                   <tr>
                                    
-                                    <td >Otto</td>
-                                    <td></td>
+                                    <td >45642%</td>
+                                    <td >45642%</td>
+                                    <td >45642%</td>
+                                    
                                   </tr>
                                   <tr>
                                     
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
                                   </tr>
                                   <tr>
                                     
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                        <td >45642%</td>
+                                        <td >45642%</td>
+                                        <td >45642%</td>
                                   </tr>
                                 </tbody>
                               </table>
-                              <table class="table">
-                                    <thead>
-                                       <tr>
-                                            <th colspan="2">Tahap Persiapan</th>
-                                            <th></th>
-                                       </tr>
-                                      <tr>
-                                      
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                       
-                                      <tr>
-                                       
-                                        <td >Otto</td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                      </tr>
-                                      <tr>
-                                        
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                   </section >
-                   <section class="fifth-two">
-                        <div class="third-container">
-                                <span><hr></span> 
-                 
-                             </div>
-                             <div class="fourth-container">
-                                 <h3>Tahapan</h3>
-                                 <h3>Pilkada</h3>
-                                 <p>Tahapan pada Pilkada 2018</p>
-                                 <h4></h4>
-                             </div>
-                        <table class="table">
-                                <thead>
-                                   <tr>
-                                       <th colspan="2">Tahapan Program dan Jadwal Penyelenggaraan Pemilihan Umum Tahun 2019</th>
-                                       <th></th>
-                                   </tr>
-                                  <tr>
-                                  
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                   
-                                  <tr>
-                                   
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                   </section>
-            </div>
-            <footer class="footer-style">
-                    <div class="third-container">
-                            <span><hr></span> 
-             
-                         </div>
-                         <div>
-                             <h3>Kontak</h3>
-                             <span class="size"><i class="fas fa-archway"></i></span>
-                            <h5>Komisi Pemilihan Umum</h5>
-                            <p>Jl. Imam Bonjol No 29</p>
-                                    <p>Jakarta (10310)</p>
-                                   <p> Tlp: (021) 3193-7223</p> 
-                                    <p>Fax: (021) 3157-759</p>
-                         </div>
-
-            </footer>
+                </div>
+                 <div class="dis-style">
+                   
+                        <span>
+                                <h3>Disclaimer</h3>
+                                <hr>
+                                <p>1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg disalin apa adanya/sesuai dengan angka yang tertulis pada Salinan Formulir C1 yang diterima KPU Kabupaten/Kota dari KPPS</p>
+                                <p>2.Apabila terdapat kekeliruan pengisian data pada Formulir C1, dapat dilakukan perbaikan pada rapat pleno terbuka rekapitulasi di tingkat kecamatan</p>
+                                <p>3.Apabila terdapat perbedaan data antara entri di Situng dan Salinan Formulir C1, akan dilakukan koreksi sesuai data yang tertulis di Salinan Formulir C1.</p>
+                                <p>4.Data yang ditampilkan di Situng bukan merupakan hasil resmi penghitungan perolehan suara. Penetapan hasil rekapitulasi penghitungan perolehan suara dilakukan secara berjenjang sesuai tingkatannya dalam rapat pleno terbuk</p>
+                        </span>
+                         
+                   
+                 </div>
+                  <footer>
+                     <h3>KONTAK</h3>
+                    <span ><hr></span>
+                         <p>Call Center 021 319 025 67/021 319 025 77</p>
+                         <p>Whatsapp:024115444</p>
+                         <p>email:jhasj@gmail.com</p>
+                         <span ><hr></span>
+                             <p> Mulai pukul 08.00-18.00</p>
+                             <p>
+                                 #KPUTransparan
+                             </p>
+                 </footer> 
 </body>
 </html>

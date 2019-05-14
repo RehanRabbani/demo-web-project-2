@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<style>
+    body{
+        height: 100%;
+    }
+    .size{
+        font-size: 2rem;
+    }
+ li{
+     list-style-type: none;
+ }
+ .navbar{
+     justify-content: flex-start !important;
+    
+ }
+ .highlight{
+     border: 1px solid;
+ }
+ .dropdown-border{
+     border-bottom: 5px solid;
+ }
+ .dropdown-item{
+     width: 90%;
+     margin-left: 6px;
+ }
+ .second-container{
+     background-image: url('first.png');
+     height: 470px;
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+
+
+
+ }
+ .third-container{
+     height: 50px;
+     width: 100%;
+     padding-left: 250px;
+    padding-right: 250px;
+     /* background-color: palevioletred; */
+ }
+ .footer-style>.third-container{
+    padding-left: 700px;
+    padding-right: 700px;
+ }
+ .third-container>span>hr{
+     background-color: yellow;
+     
+ }
+ .fourth-container{
+     height: 150px;
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .fifth-container{
+ 
+ display: flex;
+ flex-wrap: wrap;
+ }
+ .fifth-container>section{
+     width: 50%;
+     height: 720px;
+ }
+ .fifth-one{
+ background-color: paleturquoise;
+
+ }
+ .fifth-two{
+    background-color: plum;
+
+ 
+ }
+ .table{
+     width: 80%;
+     margin-left: 2.5rem;
+ }
+ .footer-style{
+     background-image: url('second.png');
+     height: 570px;
+     width: 100%;
+     background-position: center;
+     background-size: contain;
+     margin-top: 2rem;
+ }
+ /* small screen */
+ @media only screen and (max-width: 600px) {
+    .dropdown-menu.show{
+        width: 191%;
+    }
+    .third-container{
+        padding-left: 100px;
+    padding-right: 100px;
+    }
+    .fifth-container>section{
+        width: 500px;
+    }
+}
+</style>
+</head>
+
+<body>
+    
+        
+        <nav class="navbar sticky-top navbar-light bg-light">
+                <span class="size"><i class="fas fa-archway"></i></span>
+                <a class="navbar-brand" href="index.html">Komisi Pemilihan Umum</a>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          jENIS PEMILIHAN
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  
+                                <a class="dropdown-item highlight" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                  <hr>
+                          <a class="dropdown-item highlight" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          
+                        </div>
+                        
+                      </li>
+              </nav>
+            <div class="second-container">
+                   <h3> PORTAL PUBLIKASI</h3>
+                    <h3>PILKADA DAN PEMILU</h3>
+                <h3>INDONESIA</h3>
+            </div>
+             
+            <div class="fifth-container">
+                   <section class="fifth-one">
+                        <div class="third-container">
+                                <span><hr></span> 
+                 
+                             </div>
+                             <div class="fourth-container">
+                                 <h3>Tahapan</h3>
+                                 <h3>Pilkada</h3>
+                                 <p>Tahapan pada Pilkada 2018</p>
+                                 <h4></h4>
+                             </div>
+                        <table class="table">
+                                <thead>
+                                   <tr>
+                                        <th colspan="2">Tahap Persiapan</th>
+                                        
+                                   </tr>
+                                  <tr>
+                                  
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                  <tr>
+                                   
+                                    <td >Otto</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <table class="table">
+                                    <thead>
+                                       <tr>
+                                            <th colspan="2">Tahap Persiapan</th>
+                                           
+                                       </tr>
+                                      <tr>
+                                      
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                      <tr>
+                                       
+                                        <td >Otto</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                   </section >
+                   <section class="fifth-two">
+                        <div class="third-container">
+                                <span><hr></span> 
+                 
+                             </div>
+                             <div class="fourth-container">
+                                 <h3>Tahapan</h3>
+                                 <h3>Pilkada</h3>
+                                 <p>Tahapan pada Pilkada 2018</p>
+                                 <h4></h4>
+                             </div>
+                        <table class="table">
+                                <thead>
+                                   <tr>
+                                       <th colspan="2">Tahapan Program dan Jadwal Penyelenggaraan Pemilihan Umum Tahun 2019</th>
+                                       
+                                   </tr>
+                                  <tr>
+                                  
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                  <tr>
+                                   
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                   </section>
+            </div>
+            <footer class="footer-style">
+                    <div class="third-container">
+                            <span><hr></span> 
+             
+                         </div>
+                         <div>
+                             <h3>Kontak</h3>
+                             <span class="size"><i class="fas fa-archway"></i></span>
+                            <h5>Komisi Pemilihan Umum</h5>
+                            <p>Jl. Imam Bonjol No 29</p>
+                                    <p>Jakarta (10310)</p>
+                                   <p> Tlp: (021) 3193-7223</p> 
+                                    <p>Fax: (021) 3157-759</p>
+                                    <button type="button" class="btn btn-warning">Warning</button>
+                         </div>
+
+            </footer>
+</body>
+</html>
