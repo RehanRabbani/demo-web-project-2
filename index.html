@@ -166,21 +166,61 @@
               <form>
                     <div class="drp-down">
                             <div>
-                                    <div class="form-group">
+                                    <div class="form-group" >
                                            
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                              <option>PILPRES</option>
-                                              <option>PILEG DPR</option>
+                                            <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()" onchange="updateChartType()">
+                                              <option value="pie">PILPRES</option>
+                                              <option value="bar">PILEG DPR</option>
                                               <option>PILEG DPRD PROVINSI</option>
                                               <option>PILEG DPRd KAB/KOTA</option>
                                               <option>PEMILU DPD</option>
                                             </select>
                                           </div>
+                                          <script>
+                                              let chartv = "pie";
+                                              let strUser;
+                                          function myfunc(){
+                                            var e = document.getElementById("exampleFormControlSelect1");
+                                                 strUser = e.options[e.selectedIndex].value;
+                                                console.log(strUser);
+                                        //         if(strUser==="PILPRES"){
+                                        //                 document.getElementById('exampleFormControlSelect1').innerHTML+=`
+                                        //                 <div class="form-group">
+                                           
+                                        //    <select class="form-control" id="exampleFormControlSelect2">
+                                        //      <option>Hitung Suara</option>
+                                        //      <option>Rekapitulasi Hasil Pemilu</option>
+                                        //      <option>Penetapan Hasil Pemilu</option>
+                                        //      <option>Daftar Sengketa</option>
+                                           
+                                        //    </select>
+                                        //  </div>
+                                        //                 `
+                                        //         }
+                                                if(strUser==="line"){
+                                                    chartv="bar";
+                                                    document.getElementById('form-three').style.display="none";
+                                                    document.getElementById('one').innerHTML+=`
+                                                        <div class="form-group">
+                                           
+                                           <select class="form-control" id="exampleFormControlSelect2">
+                                             <option>WILAYAH</option>
+                                             <option>DAPIL</option>
+                                             
+                                           
+                                           </select>
+                                         </div>
+                                                        `
+                                                       
+                                               }
+                                               
+                                          }
+                                          </script>
                             </div>
                             <div>
-                                    <div class="form-group">
+                                    <div class="form-group" id="form-two">
                                            
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <select class="form-control" id="exampleFormControlSelect2">
                                               <option>Hitung Suara</option>
                                               <option>Rekapitulasi Hasil Pemilu</option>
                                               <option>Penetapan Hasil Pemilu</option>
@@ -190,16 +230,19 @@
                                           </div>
                             </div>
                             <div>
-                                    <div class="form-group">
+                                    <div class="form-group" id="form-three">
                                            
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                              <option>AcEH</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                              <option>5</option>
+                                            <select class="form-control" id="exampleFormControlSelect3">
+                                              <option>ACEH</option>
+                                              <option>SUMTERA UTARA</option>
+                                              <option>SUMTERA BARAT</option>
+                                              <option>RIAU</option>
+                                              <option>JAMBI</option>
                                             </select>
                                           </div>
+                            </div>
+                            <div id="one">
+
                             </div>
                         </div>
                    
@@ -213,7 +256,7 @@
                     <script>
                     var ctx = document.getElementById('myChart').getContext('2d');
                     var myChart = new Chart(ctx, {
-                        type: 'pie',
+                        type: "pie",
                         responsive: true,
                         data: {
                             labels: ['Red', 'Blue'],
@@ -245,6 +288,46 @@
                             }
                         }
                     });
+                    function updateChartType() {
+                        let dataBaby = [1, 10];
+let moreDataBaby = [20, 30];
+myData = {
+        labels: ["January", "February"],
+        datasets: [
+        //   {
+        //     label: "Data, baby!",
+        //     fill: false,
+        //     backgroundColor: 'rgb(190, 99, 255, 0.25)',
+        //     borderColor: 'rgb(190, 99, 255)',
+        //     data: dataBaby,
+        //   },
+          {
+            label: '# of Votes',
+            data: [18, 19],
+            backgroundColor: [
+               
+                'rgba(54, 162, 235, 0.2)',
+                '#ffd27f',
+               
+            ],
+            borderColor: [
+                
+                'rgba(54, 162, 235, 1)',
+                '#ffa500',
+               
+            ],
+            borderWidth: 1
+        },
+        ]
+    };
+
+                        // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
+                         myChart.destroy();
+                         myChart = new Chart(ctx, {
+                           type: document.getElementById("exampleFormControlSelect1").value,
+                           data: myData,
+                         });
+                      };
                     </script>
                   </div>
                 <div class="table-style">
