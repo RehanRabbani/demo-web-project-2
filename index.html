@@ -1,224 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<style>
-
-    body{
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
         height: 100%;
-    }
-    .navbar{
-        justify-content: flex-start !important;
+      }
+      .navbar {
+        justify-content: space-between;
         flex-wrap: wrap;
-    }
-    .size{
+        padding-left: 5rem;
+        padding-right: 6rem; 
+      }
+      .size {
         font-size: 1.25rem;
-    }
-    .drp-down{
-        
+      }
+      .drp-down {
         display: flex;
         flex-wrap: wrap;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        border: 1px solid #ced4da;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
         margin-top: 1rem;
         padding-top: 1rem;
         border-radius: 5px;
-        
-    }
-    .drp-down>div{
-        width: 400px;
-        
-        
-    }
-    .con-size
-    {
+      }
+      .drp-down > div {
+        width: 20%;
+      }
+      .con-size {
         width: 70%;
         height: 200px;
-    }
-    .chart-style{
+      }
+      .chart-style {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .chart-style >h3{
+        height: 600px;
+    margin-left: 2.45rem;
+    border-radius: 5px;
+    margin-right: 2.45rem;
+    margin-top: 0.5rem;
+   
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+      }
+      .chart-style>p{
+        margin-top: 8px;
+    font-weight: 500;
+      }
+      .h3-control{
+          color: white;
+    margin-top: -15.5rem;
+    border-radius: 5px 5px 0px 0px;;
+    /* text-align: center; */
+    width: 100%;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(90, 98, 105);
+    /* font-size: 17rem; */
+      }
+      /* .chart-style > h3 {
         text-align: center;
-        background-color: rgb(46, 75, 75);
+        background-color:rgb(90, 98, 105);
         color: white;
         border-radius: 5px;
-    }
-    .chart-style>p:nth-child(3){
-        background-color: rgb(46, 75, 75);
-        font-size: 0.725rem;
-        color: white;
-    }
-    .table-style{
-        margin-top: 20rem;
-    }
-    .table-style>p:first-child{
-        background-color:  rgb(46, 75, 75);
-        font-size: 0.725rem;
-        color: white;
-    }
-    thead{
-        background-color: rgb(25, 41, 41);
+      } */
+      .chart-style > p:nth-child(3) {
+        background-color: rgb(90, 98, 105);
+    font-size: 0.725rem;
     color: white;
-    }
-    .third-container{
-     height: 50px;
-     width: 100%;
-     padding-left: 250px;
-    padding-right: 250px;
-     /* background-color: palevioletred; */
- }
- .third-container>span>hr{
-     background-color: yellow;
-     
- }
- footer{
+    height: 2rem;
     display: flex;
-    flex-direction: column;
-    background-color: black;
-    color: white;
+    /* align-self: center; */
     align-items: center;
- }
- footer>span{
-     background-color: black !important;
-     height: 20px;
-    width: 143px;
- }
- footer>span>hr{
-     background-color: white;
- }
- .dis-style{
-     display: flex;
-     flex-direction: column;
+    border-radius: 8px;
+    margin-top: 1px;
+    font-size: 11px;
+    width: 46%;
+    justify-content: center;
+      }
+      .table-style {
+        margin-top: 10rem;
+      }
+      .table-style > p:first-child {
+        background-color: rgb(90, 98, 105);
+        font-size: 0.725rem;
+        color: white;
+      }
+      thead {
+        background-color:rgb(90, 98, 105);
+        color: white;
+      }
+      .third-container {
+        height: 50px;
+        width: 100%;
+        padding-left: 250px;
+        padding-right: 250px;
+        /* background-color: palevioletred; */
+      }
+      .third-container > span > hr {
+        background-color: yellow;
+      }
+      footer {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        align-items: center;
+      }
+      footer > span {
+        background-color: black !important;
+        height: 20px;
+        width: 143px;
+      }
+      footer > span > hr {
+        background-color: white;
+      }
+      .dis-style {
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid;
+
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+        border: 1px solid rgb(90, 98, 105);
+      }
+      /* .dis-style > span > h3 {
+        text-align: center;
+        height: 60px;
+      } */
     
-     border: 1px solid;
-    
-     margin-left: 1.25rem;
-     margin-right: 1.25rem;
-     margin-bottom: 0.5rem;
-     border-radius: 5px;
-     border: 1px solid #ced4da;
- }
- .dis-style>span>h3{
-     text-align: center;
-     height: 60px;
+      .dis-style > span > p {
+        padding-left: 1rem;
+      }
+      .bg-light {
+        background-color: rgb(245, 179, 55)!important;
+      }
+      .btn-outline-warning {
+        color: black;
+        border-color: white;
+      }
+      td {
+        text-align: center;
+      }
+      .styleinput {
+       
+        position: absolute;
+        z-index: -1;
+        left: 200px;
+        width: 12%;
+        height: 5%;
+        top: 93px;
+        margin-left: 2.8rem;
+      border: none;
+      }
+      input:focus,
+      textarea {
+         
+        outline: none !important;
+      }
+      .input-icon {
+        position: absolute;
+        left: 380px;
+        width: 1%;
+        height: 4%;
+        top: 95px;
      
- }
- .dis-style>span>p{
-     padding-left: 1rem;
- }
- .bg-light{
-     background-color: #ffc107 !important;
- }
- .btn-outline-warning{
-     color: black;
-     border-color: white;
- }
- td{
-     text-align: center;
- }
-    @media only screen and (max-width: 600px) {
-        .drp-down{
-            margin-left: 1rem;
-            margin-bottom: 1rem;
-            width: 90%;
-        }
-        .table-style{
-        margin-top: 0rem;
-    }
-    .drp-down>div {
-    width: 300px;
-}
-.chart-style{
-    width: 90%;
-    margin-left: 1rem;
+      }
+      .select-display {
+       
+        margin-left: -220px;
+        margin-right: 160px;
+        width: 100%
+      }
+      .select-display-one{
+          display: flex;
+          justify-content: space-evenly;        
+          margin-left: -240px;
+        margin-right: 160px;
+        width:400px;
+      }
+      .select-display-one>div{
+          width:42%;
+      }
+     
+      .h3-control>h3{
+          font-size: 1rem;
+      }
+      .left-text{
+          color: black !important;
+        position: absolute;
+    top: 32rem;
+    left: 8rem;
+    font-size: 0.7rem;
    
-}
-.dis-style{
-    width: 90%;
-    margin-left: 1.25rem;
-}
-    }
-</style>
-</head>
-<body>
-        <nav class="navbar sticky-top navbar-light bg-light">
-                <span class="size"><i class="fas fa-archway"></i></span>
-               <span> <a class="navbar-brand" href="#">Komisi Pemilihan Umum</a></span>
-               
-                <button type="button" class="btn btn-outline-warning">Reset Filter</button>
-              </nav>
-              <form>
-                    <div class="drp-down">
-                            <div>
-                                    <div class="form-group" onchange="updateChartType()">
-                                           
-                                            <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()" >
-                                              <option value="pie">PILPRES</option>
-                                              <option value="bar">PILEG DPR</option>
-                                              <option value="pileg">PILEG DPRD PROVINSI</option>
-                                              <option value="kota">PILEG DPRd KAB/KOTA</option>
-                                              <option>PEMILU DPD</option>
-                                            </select>
-                                          </div>
-                                          <script>
-                                              let chartv = "pie";
-                                              let strUser;
-                                          function myfunc(){
-                                            var e = document.getElementById("exampleFormControlSelect1");
-                                                 strUser = e.options[e.selectedIndex].value;
-                                                console.log(strUser +"h");
-                                        //         if(strUser==="PILPRES"){
-                                        //                 document.getElementById('exampleFormControlSelect1').innerHTML+=`
-                                        //                 <div class="form-group">
-                                           
-                                        //    <select class="form-control" id="exampleFormControlSelect2">
-                                        //      <option>Hitung Suara</option>
-                                        //      <option>Rekapitulasi Hasil Pemilu</option>
-                                        //      <option>Penetapan Hasil Pemilu</option>
-                                        //      <option>Daftar Sengketa</option>
-                                           
-                                        //    </select>
-                                        //  </div>
-                                        //                 `
-                                        //         }
-                                                if(strUser ==="bar"){
-                                                    
-                                                    document.getElementById('form-three').style.display="none";
-                                                    document.getElementById('one').innerHTML=`
-                                                        <div class="form-group">
+    font-weight: bold
+      }
+      .left-text>p.right-text>p{
+        margin-bottom: 0px !important;
+      }
+      .right-text{
+        position: absolute;
+    top: 25rem;
+    right: 8rem;
+    font-size: 0.7rem;
+   
+    font-weight: bold
+      }
+      @media only screen and (max-width: 600px) {
+        .drp-down {
+          margin-left: 1rem;
+          margin-bottom: 1rem;
+          width: 90%;
+        }
+        .table-style {
+          margin-top: 0rem;
+        }
+        .drp-down > div {
+          width: 300px;
+        }
+        .chart-style {
+          width: 90%;
+          margin-left: 1rem;
+        }
+        .dis-style {
+          width: 90%;
+          margin-left: 1.25rem;
+        }
+        
+        .navbar {
+       padding-left: 0.5rem;
+       padding-right: 0.5rem;
+      
+        
+      }
+      .select-display-one{
+          flex-direction: column;
+        justify-content: space-evenly;
+    margin-left: 0px;
+    margin-right:0px;
+   
+      }
+      .select-display-one>div{
+          width:75%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-light bg-light">
+     
+      <span> <span class="size"><i class="fas fa-archway"></i></span> <a class="navbar-brand" href="#"><b>Komisi Pemilihan Umum</b></a></span>
+
+      <button type="button" class="btn btn-outline-warning">
+        Reset Filter
+      </button>
+    </nav>
+    <form>
+      <div class="drp-down">
+        <div>
+          <div class="form-group" onchange="updateChartType()">
+            <input type="search" class="styleinput">
+            <!-- <span class="input-icon"><i class="fas fa-times"></i></span> -->
+            <select
+              class="form-control"
+              id="exampleFormControlSelect1"
+              onclick="myfunc()"
+            >
+              <option value="pie">PILPRES </option>
+              <option value="bar">PILEG DPR</option>
+              <option value="pileg">PILEG DPRD PROVINSI</option>
+              <option value="kota">PILEG DPRd KAB/KOTA</option>
+              <option>PEMILU DPD</option>
+            </select>
+          </div>
+          <script>
+            
+            let chartv = "pie";
+            let strUser;
+            function myfunc() {
+              var e = document.getElementById("exampleFormControlSelect1");
+              strUser = e.options[e.selectedIndex].value;
+              console.log(strUser + "h");
+
+              if (strUser === "bar") {
+                document.getElementById("form-three").style.display = "none";
+                document.getElementById("one").innerHTML = `
+                                                        <div class="form-group select-display">
                                            
                                                              
-                                                                      <select class="form-control" id="exampleFormControlSelect2">
+                                                                      <select class="form-control " id="exampleFormControlSelect2">
                                              <option>WILAYAH</option>
                                              <option>DAPIL</option>
                                              
                                            
                                            </select>
                                          </div>
-                                                        `
-                                                       
-                                               }
-                                               if(strUser ==="pie"){
-                                                    
-                                                    document.getElementById('form-three').style.display="none";
-                                                    document.getElementById('one').innerHTML=`
-                                                        <div class="form-group">
+                                                        `;
+              }
+              if (strUser === "pie") {
+                document.getElementById("form-three").style.display = "none";
+                document.getElementById("one").innerHTML = `
+                                                        <div class="form-group select-display">
                                            
                                                                 <select class="form-control" id="exampleFormControlSelect3">
                                                                         <option>ACEH</option>
@@ -228,238 +360,236 @@
                                                                         <option>JAMBI</option>
                                                                       </select>
                                          </div>
-                                                        `
-                                                       
-                                               }
-                                               if(strUser ==="pileg" || strUser==="kota"){
-                                                    
-                                                    document.getElementById('form-three').style.display="none";
-                                                    document.getElementById('one').innerHTML=`
-                                                    <div class="form-group">
+                                                        `;
+              }
+              if (strUser === "pileg" || strUser === "kota") {
+                // document.getElementById('form-three').style.display="none";
+                document.getElementById("one").innerHTML = `
+                                                   <div class="select-display-one ">
+                                                        <div class="form-group">
                                            
                                                              
                                            <select class="form-control" id="exampleFormControlSelect2">
-                  <option>WILAYAH</option>
-                  <option>DAPIL</option>
+                 
+                                                  <option>DAPIL</option>
+                                                   <option>WILAYAH</option>
                   
                 
-                </select>
-              </div>
-                                                        <div class="form-group">
-                                           
-                                                                <select class="form-control" id="exampleFormControlSelect3">
-                                                                        <option>ACEH</option>
-                                                                        <option>SUMTERA UTARA</option>
-                                                                        <option>SUMTERA BARAT</option>
-                                                                        <option>RIAU</option>
-                                                                        <option>JAMBI</option>
-                                                                      </select>
-                                         </div>
-                                                        `
-                                                       
-                                               }
-                                             
-                                               
-                                          }
-                                          </script>
-                            </div>
-                            <div>
-                                    <div class="form-group" id="form-two">
-                                           
-                                            <select class="form-control" id="exampleFormControlSelect2">
-                                              <option>Hitung Suara</option>
-                                              <option>Rekapitulasi Hasil Pemilu</option>
-                                              <option>Penetapan Hasil Pemilu</option>
-                                              <option>Daftar Sengketa</option>
-                                            
-                                            </select>
+                                        </select>
                                           </div>
-                            </div>
-                            <div>
-                                    <div class="form-group" id="form-three">
+                                         <div class="form-group ">
                                            
-                                            <select class="form-control" id="exampleFormControlSelect3">
-                                              <option>ACEH</option>
-                                              <option>SUMTERA UTARA</option>
-                                              <option>SUMTERA BARAT</option>
-                                              <option>RIAU</option>
-                                              <option>JAMBI</option>
-                                            </select>
+                                           <select class="form-control" id="exampleFormControlSelect3">
+                                                   <option>ACEH</option>
+                                                   <option>SUMTERA UTARA</option>
+                                                   <option>SUMTERA BARAT</option>
+                                                   <option>RIAU</option>
+                                                   <option>JAMBI</option>
+                                                 </select>
                                           </div>
-                            </div>
-                            <div id="one">
+                                                   </div>
+              
 
-                            </div>
-                        </div>
-                   
-                   
-                  </form>
-                  <div class="chart-style">
-                    <h3>HASIL HITUNG SUARA PEMILU PRESIDEN & WAKIL PRESIDEN RI 2019 </h3>
-                    <p>TINGKAT NASIONAL</p>
-                    <p>Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS (81.81361%)</p>
-                   <div class="con-size"> <canvas id="myChart"></canvas></div>
-                    <script>
-                    var ctx = document.getElementById('myChart').getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: "pie",
-                        responsive: true,
-                        data: {
-                            labels: ['Red', 'Blue'],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19],
-                                backgroundColor: [
-                                   
-                                    'rgba(54, 162, 235, 0.2)',
-                                    '#ffd27f',
-                                   
-                                ],
-                                borderColor: [
-                                    
-                                    'rgba(54, 162, 235, 1)',
-                                    '#ffa500',
-                                   
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    function updateChartType() {
-                        let dataBaby = [1, 10];
-let moreDataBaby = [20, 30];
-myData = {
-        labels: ["January", "February"],
-        datasets: [
-        //   {
-        //     label: "Data, baby!",
-        //     fill: false,
-        //     backgroundColor: 'rgb(190, 99, 255, 0.25)',
-        //     borderColor: 'rgb(190, 99, 255)',
-        //     data: dataBaby,
-        //   },
-          {
-            label: '# of Votes',
-            data: [18, 19],
-            backgroundColor: [
-               
-                'rgba(54, 162, 235, 0.2)',
-                '#ffd27f',
-               
-            ],
-            borderColor: [
-                
-                'rgba(54, 162, 235, 1)',
-                '#ffa500',
-               
-            ],
-            borderWidth: 1
-        },
-        ]
-    };
 
-                        // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
-                         myChart.destroy();
-                         myChart = new Chart(ctx, {
-                           type: document.getElementById("exampleFormControlSelect1").value,
-                           data: myData,
-                         });
-                      };
-                    </script>
-                  </div>
-                <div class="table-style">
-                        <p>Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS (81.81361%)</p>
-                        <table class="table">
-                                <thead>
-                                 
-                                  <tr>
-                                  
-                                    <th scope="col">WILAYAH</th>
-                                    <th scope="col">(01) Ir.H.JOKO WIDODO-Pro.DR.(H.C) Kh MARUF AMIN</th>
-                                    <th scope="col">(02) PRABOWO SUBIANTO-H.SANDIAGA SALAHUDIN UNO</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                   
-                                  <tr>
-                                   
-                                    <td >45642%</td>
-                                    <td >45642%</td>
-                                    <td >45642%</td>
-                                    
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                  <tr>
-                                    
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                        <td >45642%</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                </div>
-                 <div class="dis-style">
-                   
-                        <span>
-                                <h3>Disclaimer</h3>
-                                <hr>
-                                <p>1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg disalin apa adanya/sesuai dengan angka yang tertulis pada Salinan Formulir C1 yang diterima KPU Kabupaten/Kota dari KPPS</p>
-                                <p>2.Apabila terdapat kekeliruan pengisian data pada Formulir C1, dapat dilakukan perbaikan pada rapat pleno terbuka rekapitulasi di tingkat kecamatan</p>
-                                <p>3.Apabila terdapat perbedaan data antara entri di Situng dan Salinan Formulir C1, akan dilakukan koreksi sesuai data yang tertulis di Salinan Formulir C1.</p>
-                                <p>4.Data yang ditampilkan di Situng bukan merupakan hasil resmi penghitungan perolehan suara. Penetapan hasil rekapitulasi penghitungan perolehan suara dilakukan secara berjenjang sesuai tingkatannya dalam rapat pleno terbuk</p>
-                        </span>
-                         
-                   
-                 </div>
-                  <footer>
-                     <h3>KONTAK</h3>
-                    <span ><hr></span>
-                         <p>Call Center 021 319 025 67/021 319 025 77</p>
-                         <p>Whatsapp:024115444</p>
-                         <p>email:jhasj@gmail.com</p>
-                         <span ><hr></span>
-                             <p> Mulai pukul 08.00-18.00</p>
-                             <p>
-                                 #KPUTransparan
-                             </p>
-                 </footer> 
-</body>
+
+
+              
+                                                
+                                                        `;
+              }
+            }
+          </script>
+        </div>
+        <div>
+          <div class="form-group" id="form-two">
+            <select class="form-control" id="exampleFormControlSelect2">
+              <option>Hitung Suara</option>
+              <option>Rekapitulasi Hasil Pemilu</option>
+              <option>Penetapan Hasil Pemilu</option>
+              <option>Daftar Sengketa</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="form-group" id="form-three">
+            <select class="form-control" id="exampleFormControlSelect3">
+              <option>ACEH</option>
+              <option>SUMTERA UTARA</option>
+              <option>SUMTERA BARAT</option>
+              <option>RIAU</option>
+              <option>JAMBI</option>
+            </select>
+          </div>
+        </div>
+        <div id="one"></div>
+      </div>
+    </form>
+    <div class="chart-style">
+     <div class="h3-control"> <h3>HASIL HITUNG SUARA PEMILU PRESIDEN & WAKIL PRESIDEN RI 2019</h3></div>
+      <p>TINGKAT NASIONAL</p>
+      <p>
+        Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS
+        (81.81361%)
+      </p>
+      <div class="con-size"><canvas id="myChart"></canvas>
+    <span class="left-text"><p>(01) Ir. H. JOKO WIDODO - Prof. Dr. (H.C)</p><p>KH. MA'RUF AMIN (56.31%)</p><p>Perolehan Suara: 69 993 678</p></span>
+    <span class="right-text"><p>(02) H. PRABOWO SUBIANTO - H. SANDIAGA</p><p>SALAHUDIN UNO (43.69%)</p><p>Perolehan Suara: 54 317 726</p></span>
+    </div>
+      <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var myChart = new Chart(ctx, {
+          type: "pie",
+          responsive: true,
+          data: {
+              
+            // labels: ["Red", "Blue"],
+            datasets: [
+              {
+                label: "hell",
+                data: [12, 19],
+                backgroundColor: ["rgb(142, 214, 255)",
+                 "rgb(255, 227, 176)"],
+               
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {
+              legend:{
+                  labels:{
+                      fontColor:'black'
+                  }
+              },
+            scales: {
+              
+            }
+          }
+        });
+        function updateChartType() {
+          let dataBaby = [1, 10];
+          let moreDataBaby = [20, 30];
+          
+          myData = {
+            labels: ["January", "February"],
+            datasets: [
+              //   {
+              //     label: "Data, baby!",
+              //     fill: false,
+              //     backgroundColor: 'rgb(190, 99, 255, 0.25)',
+              //     borderColor: 'rgb(190, 99, 255)',
+              //     data: dataBaby,
+              //   },
+              {
+                label: "# of Votes",
+                data: [18, 19],
+                backgroundColor: ["rgba(54, 162, 235, 0.2)", "#ffd27f"],
+                borderColor: ["rgba(54, 162, 235, 1)", "#ffa500"],
+                borderWidth: 1
+              }
+            ]
+          };
+
+          // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
+          myChart.destroy();
+          myChart = new Chart(ctx, {
+            type: document.getElementById("exampleFormControlSelect1").value,
+            data: myData
+          });
+        }
+      </script>
+    </div>
+    <div class="table-style">
+      <p>
+        Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS
+        (81.81361%)
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">WILAYAH</th>
+            <th scope="col">
+              (01) Ir.H.JOKO WIDODO-Pro.DR.(H.C) Kh MARUF AMIN
+            </th>
+            <th scope="col">(02) PRABOWO SUBIANTO-H.SANDIAGA SALAHUDIN UNO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+          <tr>
+            <td>45642%</td>
+            <td>45642%</td>
+            <td>45642%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dis-style">
+      <span>
+        <h3>Disclaimer</h3>
+        <hr />
+        <p>
+          1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg
+          disalin apa adanya/sesuai dengan angka yang tertulis pada Salinan
+          Formulir C1 yang diterima KPU Kabupaten/Kota dari KPPS
+        </p>
+        <p>
+          2.Apabila terdapat kekeliruan pengisian data pada Formulir C1, dapat
+          dilakukan perbaikan pada rapat pleno terbuka rekapitulasi di tingkat
+          kecamatan
+        </p>
+        <p>
+          3.Apabila terdapat perbedaan data antara entri di Situng dan Salinan
+          Formulir C1, akan dilakukan koreksi sesuai data yang tertulis di
+          Salinan Formulir C1.
+        </p>
+        <p>
+          4.Data yang ditampilkan di Situng bukan merupakan hasil resmi
+          penghitungan perolehan suara. Penetapan hasil rekapitulasi
+          penghitungan perolehan suara dilakukan secara berjenjang sesuai
+          tingkatannya dalam rapat pleno terbuk
+        </p>
+      </span>
+    </div>
+    <footer>
+      <h3>KONTAK</h3>
+      <span><hr /></span>
+      <p>Call Center 021 319 025 67/021 319 025 77</p>
+      <p>Whatsapp:024115444</p>
+      <p>email:jhasj@gmail.com</p>
+      <span><hr /></span>
+      <p>Mulai pukul 08.00-18.00</p>
+      <p>
+        #KPUTransparan
+      </p>
+    </footer>
+  </body>
 </html>
