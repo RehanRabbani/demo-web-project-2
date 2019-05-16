@@ -51,6 +51,17 @@
       }
       .size {
         font-size: 1.25rem;
+        /* height: 100px;
+        width: 50px;
+        background-image: url('logo.png');
+        background-position: center; */
+      }
+      .size-logo{
+          background-image: url('output-0.png');
+          background-position: center;
+          background-size: cover;
+          height: 48px;
+          width: 62px;
       }
       .drp-down {
         display: flex;
@@ -218,16 +229,16 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       }
       .select-display {
        
-        margin-left: -220px;
+        margin-left: -305px;
         margin-right: 160px;
         width: 100%
       }
       .select-display-one{
-          display: flex;
-          justify-content: space-evenly;        
-          margin-left: -240px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: -330px;
         margin-right: 160px;
-        width:400px;
+        width: 575px;
       }
       .select-display-one>div{
           width:42%;
@@ -256,6 +267,15 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
    
     font-weight: bold
       }
+      .btn-outline-warning:not(:disabled):not(.disabled):active, .show>.btn-outline-warning.dropdown-toggle {
+    color: #212529;
+    background-color: #f5b337 !important;
+    border-color: white !important;
+}
+.btn-outline-warning:hover {
+     background-color: #f5b337 !important;
+    border-color: white !important;
+}
       @media only screen and (max-width: 600px) {
         .drp-down {
           margin-left: 1rem;
@@ -291,15 +311,34 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
    
       }
       .select-display-one>div{
-          width:75%;
+        width: 52.5%;
+      }
+      .select-display {
+        margin-left: 1px;
       }
       }
+      @media only screen and (max-width: 900px) {
+        .select-display-one{
+            display: flex;
+    justify-content: space-evenly;
+    margin-left: -201px;
+    margin-right: 160px;
+    width: 376px;
+   
+      }
+      .select-display-one>div{
+        width:35%;
+      }
+      .select-display {
+        margin-left: -165px;
+      }
+      } 
     </style>
   </head>
   <body>
     <nav class="navbar sticky-top navbar-light bg-light">
      
-      <span> <span class="size"><i class="fas fa-archway"></i></span> <a class="navbar-brand" href="#"><b>Komisi Pemilihan Umum</b></a></span>
+      <span class="nav-design"> <div class="size-logo"></div> <div><a class="navbar-brand" href="#"><b>Komisi Pemilihan Umum</b></a></div></span>
 
       <button type="button" class="btn btn-outline-warning">
         Reset Filter
