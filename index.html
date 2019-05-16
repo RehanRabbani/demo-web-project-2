@@ -76,9 +76,9 @@
         margin-right: 2.5rem;
         justify-content: space-evenly;
         align-items: center;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
         margin-top: 0.5rem;
         padding-top: 1rem;
         border-radius: 5px;
@@ -102,15 +102,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 600px;
-    margin-left: 2.45rem;
-    border-radius: 5px;
-    margin-right: 2.45rem;
-    margin-top: 0.5rem;
-   
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+        height: 634px;
+        margin-left: 6.45rem;
+        border-radius: 5px;
+        margin-right: 2.45rem;
+        margin-top: 1rem;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        width: 86.5%;
       }
       .chart-style>p{
         margin-top: 8px;
@@ -118,11 +118,11 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       }
       .h3-control{
           color: white;
-    margin-top: -15.5rem;
+    margin-top: -17rem;
     border-radius: 5px 5px 0px 0px;;
     /* text-align: center; */
     width: 100%;
-    height: 58px;
+    height: 73px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +150,15 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
     justify-content: center;
       }
       .table-style {
-        margin-top: 0rem;
+        margin-top: 1rem;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 87%;
+    margin-left: 6.2rem;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
       }
       .table-style > p:first-child {
         background-color: rgb(90, 98, 105);
@@ -195,14 +203,16 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       .dis-style {
         display: flex;
         flex-direction: column;
-
-        border: 1px solid;
-
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        margin-bottom: 0.5rem;
-        border-radius: 5px;
-        border: 1px solid rgb(90, 98, 105);
+margin-top: 1rem;
+           -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        margin-left: 6.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    width: 87%;
+      
       }
       /* .dis-style > span > h3 {
         text-align: center;
@@ -295,15 +305,34 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
      background-color: #f5b337 !important;
     border-color: white !important;
 }
+.text-center{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+    height: 4rem;
+    /* border: 1px solid; */
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+}
+.text-center>h3{
+  font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 600px) {
         .drp-down {
           margin-left: 1rem;
           margin-bottom: 1rem;
+          margin-right: 1.5rem;
           width: 90%;
           height: 100%
         }
         .table-style {
-          margin-top: 0rem;
+          margin-top: 1rem;
+          margin-left: 20px;
+          width: 90%;
         }
         .drp-down > div {
           width: 300px;
@@ -311,6 +340,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
         .chart-style {
           width: 90%;
           margin-left: 1rem;
+        
         }
         .dis-style {
           width: 90%;
@@ -340,6 +370,14 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       .nav-design{
         width: 82%;
       }
+      .right-text {
+    
+    display: none;
+    
+}
+.left-text{
+ display: none
+}
       }
       @media only screen and (min-width: 768px) {
         .select-display-one{
@@ -590,12 +628,9 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
         }
       </script>
     </div>
-    <div class="table-style">
-      <p>
-        Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS
-        (81.81361%)
-      </p>
-      <table class="table">
+    <div class="table-style table-responsive">
+      
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">WILAYAH</th>
@@ -607,47 +642,101 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
         </thead>
         <tbody>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td>  ACEH  (77,4%)</td>
+            <td> 320.767</td>
+            <td> 1.857.273</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td>  SUMATERA UTARA (81,9%)</td>
+            <td> 3.267.405</td>
+            <td>  2.862.744</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td> SUMATERA BARAT (92,6%)</td>
+            <td>  369.307</td>
+            <td>  2.309.826</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td>   RIAU  (80,7%)</td>
+            <td>993.264</td>
+            <td> 1.612.197</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td> JAMBI   (91%)</td>
+            <td>   794.423</td>
+            <td>1.080.199</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td>   SUMATERA SELATAN  (82,1%)</td>
+            <td> 1.615.270</td>
+            <td> 2.353.279</td>
           </tr>
           <tr>
-            <td>45642%</td>
-            <td>45642%</td>
-            <td>45642%</td>
+            <td> BENGKULU  (100%)</td>
+            <td>      582.845</td>
+            <td> 585.598</td>
           </tr>
+          <tr>
+            <td>   LAMPUNG    (92,8%)</td>
+            <td>     2.675.910</td>
+            <td> 1.783.853</td>
+          </tr>
+          <tr>
+            <td>  KEPULAUAN BANGKA BELITUNG  (100%)</td>
+            <td>      495.510</td>
+            <td>  288.097</td>
+          </tr>
+          <tr>
+            <td> KEPULAUAN RIAU  (86,5%)</td>
+            <td>      478.133</td>
+            <td>   397.086</td>
+          </tr>
+          <tr>
+            <td>  DKI JAKARTA   (63,5%)</td>
+            <td>       2.111.486</td>
+            <td>   1.905.768</td>
+          </tr>
+          <tr>
+            <td>    JAWA BARAT       (70,5%)</td>
+            <td>       7.794.817</td>
+            <td>  11.052.309</td>
+          </tr>
+          <tr>
+            <td>      JAWA TENGAH   (91,2%)</td>
+            <td>       15.324.096</td>
+            <td>   4.495.718</td>
+          </tr>
+          <tr>
+            <td>    DAERAH ISTIMEWA YOGYAKARTA      (94%)</td>
+            <td>      1.552.807</td>
+            <td>   693.149</td>
+          </tr>
+          <tr>
+            <td>     JAWA TIMUR         (83,9%)</td>
+            <td>     13.788.269</td>
+            <td>  6.871.399</td>
+          </tr>
+          <tr>
+            <td>       BANTEN        (69,6%)</td>
+            <td>    1.753.747</td>
+            <td> 2.817.102</td>
+          </tr>
+          <tr>
+            <td>        BALI                                  (100%)</td>
+            <td>      2.342.435</td>
+            <td>    212.577</td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
+   
     <div class="dis-style">
       <span>
+      <div class="text-center">
         <h3>Disclaimer</h3>
-        <hr />
+      </div>
+      
         <p>
           1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg
           disalin apa adanya/sesuai dengan angka yang tertulis pada Salinan
