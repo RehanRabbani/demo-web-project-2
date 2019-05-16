@@ -64,8 +64,10 @@
           width: 34px;;
       }
       .nav-design{
-          display: flex;
-          margin-bottom: 3px;
+        display: flex;
+        margin-bottom: 3px;
+        justify-content: space-evenly;
+        width: 28%;
       }
       .drp-down {
         display: flex;
@@ -75,11 +77,18 @@
         justify-content: space-evenly;
         align-items: center;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
-        margin-top: 1rem;
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
+        margin-top: 0.5rem;
         padding-top: 1rem;
         border-radius: 5px;
+        width: 86%;
+        /* height: 100%; */
+        height: 5rem;
+      }
+      .drp-container{
+        display: flex;
+    justify-content: center;
       }
       .drp-down > div {
         width: 20%;
@@ -286,11 +295,12 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
      background-color: #f5b337 !important;
     border-color: white !important;
 }
-      @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
         .drp-down {
           margin-left: 1rem;
           margin-bottom: 1rem;
           width: 90%;
+          height: 100%
         }
         .table-style {
           margin-top: 0rem;
@@ -316,8 +326,9 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       .select-display-one{
           flex-direction: column;
         justify-content: space-evenly;
-    margin-left: 0px;
-    margin-right:0px;
+    margin-left: 0px ;
+    margin-right:0px ;
+    width: 190%;
    
       }
       .select-display-one>div{
@@ -326,21 +337,24 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
       .select-display {
         margin-left: 1px;
       }
+      .nav-design{
+        width: 82%;
       }
-      @media only screen and (max-width: 900px) {
+      }
+      @media only screen and (min-width: 768px) {
         .select-display-one{
-            display: flex;
-    justify-content: space-evenly;
-    margin-left: -201px;
-    margin-right: 160px;
-    width: 376px;
+          display: flex;
+          justify-content: space-evenly;
+          margin-left: -193px;
+          margin-right: 160px;
+          width: 376px;
    
       }
       .select-display-one>div{
-        width:35%;
+        width: 38%;
       }
       .select-display {
-        margin-left: -165px;
+        margin-left: -159px;
       }
       .right-text {
     
@@ -351,6 +365,28 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
     left: 4rem;
 }
       } 
+     
+      @media only screen and (min-width: 992px) {
+  .select-display-one{
+    margin-left: -18rem;
+    width: 207%;
+  }
+  .select-display-one>div{
+    width: 46%;
+      }
+      .select-display {
+        margin-left: -19.4rem;
+      }
+      .right-text {
+    
+    right: 8rem;
+    
+}
+.left-text{
+    left: 10rem;
+}
+} 
+     
     </style>
   </head>
   <body>
@@ -362,7 +398,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
         Reset Filter
       </button>
     </nav>
-    <form>
+    <form class="drp-container">
       <div class="drp-down">
         <div>
           <div class="form-group" onchange="updateChartType()">
@@ -507,7 +543,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
                 backgroundColor: ["rgb(142, 214, 255)",
                  "rgb(255, 227, 176)"],
                
-                borderWidth: 1
+                // borderWidth: 1
               }
             ]
           },
@@ -539,9 +575,8 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09);
               {
                 label: "# of Votes",
                 data: [18, 19],
-                backgroundColor: ["rgba(54, 162, 235, 0.2)", "#ffd27f"],
-                borderColor: ["rgba(54, 162, 235, 1)", "#ffa500"],
-                borderWidth: 1
+                backgroundColor: ["rgb(142, 214, 255)", "rgb(255, 227, 176)"],
+                
               }
             ]
           };
