@@ -320,8 +320,26 @@ margin-top: 1rem;
 .text-center>h3{
   font-size: 1.5rem;
 }
-
+.form-control:focus{
+  border-color: white !important;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
+}
+.table td, .table th {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important; 
+    padding-top: 1rem !important;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    width: 10rem;
+    font-size: 0.96rem;
+}
 @media only screen and (max-width: 600px) {
+  .size-logo{
+    width: 23px;
+  
+    height: 30px;
+  }
         .drp-down {
           margin-left: 1rem;
           margin-bottom: 1rem;
@@ -386,7 +404,7 @@ margin-top: 1rem;
         margin-left: 1px;
       }
       .nav-design{
-        width: 82%;
+        width: 96%;
       }
       .right-text {
     
@@ -395,6 +413,10 @@ margin-top: 1rem;
 }
 .left-text{
  display: none
+}
+.form-control:focus{
+  border-color: white !important;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
 }
       }
       @media only screen and (min-width: 768px) {
@@ -419,6 +441,10 @@ margin-top: 1rem;
 }
 .left-text{
     left: 4rem;
+}
+.form-control:focus{
+  border-color: white !important;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
 }
       } 
      
@@ -451,6 +477,15 @@ margin-top: 1rem;
 .left-text>p{
   margin: 0px;
 }
+.form-control:focus{
+  border-color: white !important;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
+}
+.form-group:focus{
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
+  border-color: white !important;
+}
+
 } 
      
     </style>
@@ -459,10 +494,22 @@ margin-top: 1rem;
     <nav class="navbar sticky-top navbar-light bg-light">
      
       <span class="nav-design"> <div class="size-logo"></div> <div><a class="navbar-brand" href="#"><b>Komisi Pemilihan Umum</b></a></div></span>
-
+      <button type="button" class="btn btn-outline-warning" id="show">
+        Sembunyikan Filter
+      </button>
       <button type="button" class="btn btn-outline-warning">
         Reset Filter
       </button>
+      
+      <script>
+    const mq = window.matchMedia( "(min-width: 500px)" );
+    if (mq.matches) {
+ document.querySelector('#show').style.display= "none";
+} else {
+// window width is less than 500px
+document.querySelector('#show').style.display= "block";
+}
+      </script>
     </nav>
     <form class="drp-container">
       <div class="drp-down">
@@ -643,20 +690,25 @@ margin-top: 1rem;
               //     data: dataBaby,
               //   },
               {
-                label: "# of Votes",
+                // label: "# of Votes",
                 data: [18, 19],
                 backgroundColor: ["rgb(142, 214, 255)", "rgb(255, 227, 176)"],
                 
               }
             ]
           };
-
+          // if(myChart.type==="bar"){
+          //   console.log(myChart.type);
+          //   document.getElementsByClassName('right-text').style.display="none";
+          //   document.getElementsByClassName('right-text').style.backgroundColor="red";
+          // }
           // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
           myChart.destroy();
           myChart = new Chart(ctx, {
             type: document.getElementById("exampleFormControlSelect1").value,
             data: myData
           });
+          
         }
       </script>
     
