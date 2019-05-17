@@ -1,546 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <style>
-      body {
-        height: 100%;
-      }
-      .navbar {
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-left: 5rem;
-        padding-right: 6rem; 
-      }
-      .size {
-        font-size: 1.25rem;
-        /* height: 100px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous" />
+  <style>
+    body {
+      height: 100%;
+    }
+
+    .navbar {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: 5rem;
+      padding-right: 6rem;
+    }
+
+    .size {
+      font-size: 1.25rem;
+      /* height: 100px;
         width: 50px;
         background-image: url('logo.png');
         background-position: center; */
-      }
-      .size-logo{
-          background-image: url('output-0.png');
-          background-position: center;
-          background-size: cover;
-          height: 42px;
-          width: 34px;;
-      }
-      .nav-design{
-        display: flex;
-        margin-bottom: 3px;
-        justify-content: space-evenly;
-        width: 28%;
-      }
-      .drp-down {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 3.5rem;
-        margin-right: 2.5rem;
-        justify-content: space-evenly;
-        align-items: center;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        margin-top: 0.5rem;
-        padding-top: 1rem;
-        border-radius: 5px;
-        width: 86%;
-        /* height: 100%; */
-        height: 5rem;
-      }
-      .drp-container{
-        display: flex;
-    justify-content: center;
-      }
-      .drp-down > div {
-        width: 20%;
-      }
-      .con-size {
-        width: 70%;
-        height: 200px;
-      }
-      .chart-style {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 634px;
-        margin-left: 6.45rem;
-        border-radius: 5px;
-        margin-right: 2.45rem;
-        margin-top: 1rem;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        width: 86.5%;
-      }
-      .chart-style>p{
-        margin-top: 8px;
-    font-weight: 500;
-      }
-      .h3-control{
-          color: white;
-    margin-top: -17rem;
-    border-radius: 5px 5px 0px 0px;;
-    /* text-align: center; */
-    width: 100%;
-    height: 73px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  rgb(90, 98, 105);
-    /* font-size: 17rem; */
-      }
-      /* .chart-style > h3 {
+    }
+
+    .size-logo {
+      background-image: url('output-0.png');
+      background-position: center;
+      background-size: cover;
+      height: 42px;
+      width: 34px;
+      ;
+    }
+
+    .nav-design {
+      display: flex;
+      margin-bottom: 3px;
+      justify-content: space-evenly;
+      width: 28%;
+    }
+
+    .drp-down {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 3.5rem;
+      margin-right: 2.5rem;
+      justify-content: space-evenly;
+      align-items: center;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-radius: 5px;
+      width: 86%;
+      /* height: 100%; */
+      height: 5rem;
+    }
+
+    .drp-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .drp-down>div {
+      width: 20%;
+    }
+
+    .con-size {
+      width: 70%;
+      height: 200px;
+    }
+
+    .chart-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 634px;
+      margin-left: 6.45rem;
+      border-radius: 5px;
+      margin-right: 2.45rem;
+      margin-top: 1rem;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      width: 86.5%;
+    }
+
+    .chart-style>p {
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .h3-control {
+      color: white;
+      margin-top: -17rem;
+      border-radius: 5px 5px 0px 0px;
+      ;
+      /* text-align: center; */
+      width: 100%;
+      height: 73px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(90, 98, 105);
+      /* font-size: 17rem; */
+    }
+
+    /* .chart-style > h3 {
         text-align: center;
         background-color:rgb(90, 98, 105);
         color: white;
         border-radius: 5px;
       } */
-      .chart-style > p:nth-child(3) {
-        background-color: rgb(90, 98, 105);
-    font-size: 0.725rem;
-    color: white;
-    height: 2rem;
-    display: flex;
-    /* align-self: center; */
-    align-items: center;
-    border-radius: 8px;
-    margin-top: 1px;
-    font-size: 11px;
-    width: 46%;
-    justify-content: center;
-      }
-      .table-style {
-        margin-top: 1rem;
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 87%;
-    margin-left: 6.2rem;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-      }
-      .table-style > p:first-child {
-        background-color: rgb(90, 98, 105);
-        font-size: 0.725rem;
-        color: white;
-        width: 35%;
-        height: 2rem;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      thead {
-        background-color:rgb(90, 98, 105);
-        color: white;
-      }
-      .third-container {
-        height: 50px;
-        width: 100%;
-        padding-left: 250px;
-        padding-right: 250px;
-        /* background-color: palevioletred; */
-      }
-      .third-container > span > hr {
-        background-color: yellow;
-      }
-      footer {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
-        align-items: center;
-      }
-      footer > span {
-        background-color: black !important;
-        height: 20px;
-        width: 143px;
-      }
-      footer > span > hr {
-        background-color: white;
-      }
-      .dis-style {
-        display: flex;
-        flex-direction: column;
-margin-top: 1rem;
-           -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-        margin-left: 6.25rem;
-    margin-right: 1.25rem;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
-    width: 87%;
-      
-      }
-      /* .dis-style > span > h3 {
+
+    .chart-style>p:nth-child(3) {
+      background-color: rgb(90, 98, 105);
+      font-size: 0.725rem;
+      color: white;
+      height: 2rem;
+      display: flex;
+      /* align-self: center; */
+      align-items: center;
+      border-radius: 8px;
+      margin-top: 1px;
+      font-size: 11px;
+      width: 46%;
+      justify-content: center;
+    }
+
+    .table-style {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 87%;
+      margin-left: 6.2rem;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .table-style>p:first-child {
+      background-color: rgb(90, 98, 105);
+      font-size: 0.725rem;
+      color: white;
+      width: 35%;
+      height: 2rem;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    thead {
+      background-color: rgb(90, 98, 105);
+      color: white;
+    }
+
+    .third-container {
+      height: 50px;
+      width: 100%;
+      padding-left: 250px;
+      padding-right: 250px;
+      /* background-color: palevioletred; */
+    }
+
+    .third-container>span>hr {
+      background-color: yellow;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      color: white;
+      align-items: center;
+    }
+
+    footer>span {
+      background-color: black !important;
+      height: 20px;
+      width: 143px;
+    }
+
+    footer>span>hr {
+      background-color: white;
+    }
+
+    .dis-style {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+      margin-left: 6.25rem;
+      margin-right: 1.25rem;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+      width: 87%;
+
+    }
+
+    /* .dis-style > span > h3 {
         text-align: center;
         height: 60px;
       } */
-    
-      .dis-style > span > p {
-        padding-left: 1rem;
-      }
-      .bg-light {
-        background-color: rgb(245, 179, 55)!important;
-      }
-      .btn-outline-warning {
-        color: black;
-        border-color: white;
-      }
-      td {
-        text-align: center;
-      }
-      .styleinput {
-       
-        position: absolute;
-        z-index: -1;
-        left: 200px;
-        width: 12%;
-        height: 5%;
-        top: 93px;
-        margin-left: 2.8rem;
-      border: none;
-      }
-      input:focus,
-      textarea {
-         
-        outline: none !important;
-      }
-      .input-icon {
-        position: absolute;
-        left: 380px;
-        width: 1%;
-        height: 4%;
-        top: 95px;
-     
-      }
-      .select-display {
-       
-        margin-left: -305px;
-        margin-right: 160px;
-        width: 100%
-      }
-      .select-display-one{
-        display: flex;
-        justify-content: space-around;
-        margin-left: -330px;
-        margin-right: 160px;
-       
-      }
-      .select-display-one>div{
-          width:42%;
-      }
-     
-      .h3-control>h3{
-          font-size: 1rem;
-      }
-      .left-text{
-          color: black !important;
-        position: absolute;
-    top: 32rem;
-    left: 8rem;
-    font-size: 0.7rem;
-   
-    font-weight: bold
-      }
-      .left-text>p.right-text>p{
-        margin-bottom: 0px !important;
-      }
-      .right-text{
-        position: absolute;
-    top: 25rem;
-    right: 8rem;
-    font-size: 0.7rem;
-   
-    font-weight: bold
-      }
-      .btn-outline-warning:not(:disabled):not(.disabled):active, .show>.btn-outline-warning.dropdown-toggle {
-    color: #212529;
-    background-color: #f5b337 !important;
-    border-color: white !important;
-}
-.btn-outline-warning:hover {
-     background-color: #f5b337 !important;
-    border-color: white !important;
-}
-.text-center{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rebeccapurple; */
-    height: 4rem;
-    /* border: 1px solid; */
-    border-bottom: 1px solid #dee2e6;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
 
-}
-.text-center>h3{
-  font-size: 1.5rem;
-}
-.form-control:focus{
-  border-color: white !important;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
-}
-.table td, .table th {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0px !important; 
-    padding-top: 1rem !important;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-    width: 10rem;
-    font-size: 0.96rem;
-}
-@media only screen and (max-width: 600px) {
-  .size-logo{
-    width: 23px;
-  
-    height: 30px;
-  }
-        .drp-down {
-          margin-left: 1rem;
-          margin-bottom: 1rem;
-          margin-right: 1.5rem;
-          width: 90%;
-          height: 100%
-        }
-        .table-style {
-          margin-top: 1rem;
-          margin-left: 20px;
-          width: 90%;
-        }
-        .drp-down > div {
-          width: 300px;
-        }
-        .chart-style {
-       
+    .dis-style>span>p {
+      padding-left: 1rem;
+    }
+
+    .bg-light {
+      background-color: rgb(245, 179, 55)!important;
+    }
+
+    .btn-outline-warning {
+      color: black;
+      border-color: white;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    .styleinput {
+
+      position: absolute;
+      z-index: -1;
+      left: 200px;
+      width: 12%;
+      height: 5%;
+      top: 93px;
+      margin-left: 2.8rem;
+      border: none;
+    }
+
+    input:focus,
+    textarea {
+
+      outline: none !important;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 380px;
+      width: 1%;
+      height: 4%;
+      top: 95px;
+
+    }
+
+    .select-display {
+
+      margin-left: -305px;
+      margin-right: 160px;
+      width: 100%
+    }
+
+    .select-display-one {
+      display: flex;
+      justify-content: space-around;
+      margin-left: -330px;
+      margin-right: 160px;
+
+    }
+
+    .select-display-one>div {
+      width: 42%;
+    }
+
+    .h3-control>h3 {
+      font-size: 1rem;
+    }
+
+    .left-text {
+      color: black !important;
+      position: absolute;
+      top: 32rem;
+      left: 8rem;
+      font-size: 0.7rem;
+
+      font-weight: bold
+    }
+
+    .left-text>p.right-text>p {
+      margin-bottom: 0px !important;
+    }
+
+    .right-text {
+      position: absolute;
+      top: 25rem;
+      right: 8rem;
+      font-size: 0.7rem;
+
+      font-weight: bold
+    }
+
+    .btn-outline-warning:not(:disabled):not(.disabled):active,
+    .show>.btn-outline-warning.dropdown-toggle {
+      color: #212529;
+      background-color: #f5b337 !important;
+      border-color: white !important;
+    }
+
+    .btn-outline-warning:hover {
+      background-color: #f5b337 !important;
+      border-color: white !important;
+    }
+
+    .text-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: rebeccapurple; */
+      height: 4rem;
+      /* border: 1px solid; */
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+
+    }
+
+    .text-center>h3 {
+      font-size: 1.5rem;
+    }
+
+    .form-control:focus {
+      border-color: white !important;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .table td,
+    .table th {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      padding-bottom: 0px !important;
+      padding-top: 1rem !important;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+      width: 10rem;
+      font-size: 0.96rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .size-logo {
+        width: 23px;
+
+        height: 30px;
+      }
+      .drp-down {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1.5rem;
+        width: 90%;
+        height: 100%
+      }
+      .table-style {
+        margin-top: 1rem;
+        margin-left: 20px;
+        width: 90%;
+      }
+      .drp-down>div {
+        width: 300px;
+      }
+      .chart-style {
+
         height: 300px;
         margin-left: 1rem;
         width: 90%;
-        
-        }
-        .h3-control{
-          margin-top: 0px;
-         
-          height: 10rem;
-          display: flex;
-          flex-direction: column
 
-        }
-        .h3-control>p{
-          margin: 0px;
-          font-weight: 500;
-          font-size: 1.1rem;
-        }
-        .chart-style > p:nth-child(3){
-          font-size: 0.5rem;
-        }
-        .dis-style {
-          width: 90%;
-          margin-left: 1.25rem;
-        }
-        
-        .navbar {
-       padding-left: 0.5rem;
-       padding-right: 0.5rem;
-      
-        
       }
-      .select-display-one{
-          flex-direction: column;
+      .h3-control {
+        margin-top: 0px;
+
+        height: 10rem;
+        display: flex;
+        flex-direction: column
+      }
+      .h3-control>p {
+        margin: 0px;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+      .chart-style>p:nth-child(3) {
+        font-size: 0.5rem;
+      }
+      .dis-style {
+        width: 90%;
+        margin-left: 1.25rem;
+      }
+
+      .navbar {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+
+      }
+      .select-display-one {
+        flex-direction: column;
         justify-content: space-evenly;
-    margin-left: 0px ;
-    margin-right:0px ;
-   
-   
+        margin-left: 0px;
+        margin-right: 0px;
+
+
       }
-      .select-display-one>div{
-        width:100%;
+      .select-display-one>div {
+        width: 100%;
       }
       .select-display {
         margin-left: 1px;
       }
-      .nav-design{
+      .nav-design {
         width: 96%;
       }
       .right-text {
-    
-    display: none;
-    
-}
-.left-text{
- display: none
-}
-.form-control:focus{
-  border-color: white !important;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
-}
+
+        display: none;
+
       }
-      @media only screen and (min-width: 768px) {
-        .select-display-one{
-          display: flex;
-          justify-content: space-evenly;
-          margin-left: -193px;
-          margin-right: 160px;
-          width: 376px;
-   
+      .left-text {
+        display: none
       }
-      .select-display-one>div{
+      .form-control:focus {
+        border-color: white !important;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4) !important;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .select-display-one {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -193px;
+        margin-right: 160px;
+        width: 376px;
+
+      }
+      .select-display-one>div {
         width: 38%;
       }
       .select-display {
         margin-left: -159px;
       }
       .right-text {
-    
-    right: 1rem;
-    
-}
-.left-text{
-    left: 4rem;
-}
-.form-control:focus{
-  border-color: white !important;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
-}
-      } 
-     
-      @media only screen and (min-width: 992px) {
-  .select-display-one{
-    margin-left: -17rem;
-    width: 207%;
-    justify-content: space-between;
-  }
-  .select-display-one>div{
-    width: 46%;
+
+        right: 1rem;
+
+      }
+      .left-text {
+        left: 4rem;
+      }
+      .form-control:focus {
+        border-color: white !important;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4) !important;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      .select-display-one {
+        margin-left: -17rem;
+        width: 207%;
+        justify-content: space-between;
+      }
+      .select-display-one>div {
+        width: 46%;
       }
       .select-display {
         margin-left: -17.3rem;
       }
       .right-text {
-    
+
         right: 12rem;
-    top: 31rem;
-    
-}
-.right-text>p{
-  margin: 0px;
-}
-.left-text{
-  left: 15rem;
-    top: 37rem;
+        top: 31rem;
 
-}
-.left-text>p{
-  margin: 0px;
-}
-.form-control:focus{
-  border-color: white !important;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
-}
-.form-group:focus{
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4) !important;
-  border-color: white !important;
-}
+      }
+      .right-text>p {
+        margin: 0px;
+      }
+      .left-text {
+        left: 15rem;
+        top: 37rem;
 
-} 
-     
-    </style>
-  </head>
-  <body>
-    <nav class="navbar sticky-top navbar-light bg-light">
-     
-      <span class="nav-design"> <div class="size-logo"></div> <div><a class="navbar-brand" href="#"><b>Komisi Pemilihan Umum</b></a></div></span>
-      <button type="button" class="btn btn-outline-warning" id="show">
-        Sembunyikan Filter
-      </button>
-      <button type="button" class="btn btn-outline-warning">
-        Reset Filter
-      </button>
-      
-      <script>
-    const mq = window.matchMedia( "(min-width: 500px)" );
-    if (mq.matches) {
- document.querySelector('#show').style.display= "none";
-} else {
-// window width is less than 500px
-document.querySelector('#show').style.display= "block";
-}
-      </script>
-    </nav>
-    <form class="drp-container">
-      <div class="drp-down">
-        <div>
-          <div class="form-group" onchange="updateChartType()">
-            <input type="search" class="styleinput">
-            <!-- <span class="input-icon"><i class="fas fa-times"></i></span> -->
-            <select
-              class="form-control"
-              id="exampleFormControlSelect1"
-              onclick="myfunc()"
-            >
-              <option value="pie">PILPRES </option>
-              <option value="pie">PILEG DPR</option>
-              <option value="pi">PILEG DPRD PROVINSI</option>
-              <option value="kota">PILEG DPRd KAB/KOTA</option>
-              <option>PEMILU DPD</option>
-            </select>
-          </div>
-          <script>
-            
-            let chartv = "pie";
-            let strUser;
-            function myfunc() {
-              var e = document.getElementById("exampleFormControlSelect1");
-              strUser = e.options[e.selectedIndex].value;
-              console.log(strUser + "h");
+      }
+      .left-text>p {
+        margin: 0px;
+      }
+      .form-control:focus {
+        border-color: white !important;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4) !important;
+      }
+      .form-group:focus {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4) !important;
+        border-color: white !important;
+      }
 
-              if (strUser === "bar") {
-                document.getElementById("form-three").style.display = "none";
-                document.getElementById("one").innerHTML = `
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar sticky-top navbar-light bg-light">
+
+    <span class="nav-design">
+      <div class="size-logo"></div>
+      <div>
+        <a class="navbar-brand" href="#">
+          <b>Komisi Pemilihan Umum</b>
+        </a>
+      </div>
+    </span>
+    <button type="button" class="btn btn-outline-warning" id="show">
+      Sembunyikan Filter
+    </button>
+    <button type="button" class="btn btn-outline-warning">
+      Reset Filter
+    </button>
+
+    <script>
+      const mq = window.matchMedia("(min-width: 500px)");
+      if (mq.matches) {
+        document.querySelector('#show').style.display = "none";
+      } else {
+        // window width is less than 500px
+        document.querySelector('#show').style.display = "block";
+      }
+    </script>
+  </nav>
+  <form class="drp-container">
+    <div class="drp-down">
+      <div>
+        <div class="form-group" onchange="updateChartType()">
+          <input type="search" class="styleinput">
+          <!-- <span class="input-icon"><i class="fas fa-times"></i></span> -->
+          <select class="form-control" id="exampleFormControlSelect1" onclick="myfunc()">
+            <option value="pie">PILPRES </option>
+            <option value="pie">PILEG DPR</option>
+            <option value="pileg">PILEG DPRD PROVINSI</option>
+            <option value="kota">PILEG DPRd KAB/KOTA</option>
+            <option>PEMILU DPD</option>
+          </select>
+        </div>
+        <script>
+
+          let chartv = "pie";
+          let strUser;
+          function myfunc() {
+            var e = document.getElementById("exampleFormControlSelect1");
+            strUser = e.options[e.selectedIndex].value;
+            console.log(strUser + "h");
+
+            if (strUser === "bar") {
+              document.getElementById("form-three").style.display = "none";
+              document.getElementById("one").innerHTML = `
                                                         <div class="form-group select-display">
                                            
                                                              
@@ -552,10 +581,10 @@ document.querySelector('#show').style.display= "block";
                                            </select>
                                          </div>
                                                         `;
-              }
-              if (strUser === "pie") {
-                document.getElementById("form-three").style.display = "none";
-                document.getElementById("one").innerHTML = `
+            }
+            if (strUser === "pie") {
+              document.getElementById("form-three").style.display = "none";
+              document.getElementById("one").innerHTML = `
                                                         <div class="form-group select-display">
                                            
                                                                 <select class="form-control" id="exampleFormControlSelect3">
@@ -568,10 +597,10 @@ document.querySelector('#show').style.display= "block";
                                                                       </select>
                                          </div>
                                                         `;
-              }
-              if (strUser === "pileg" || strUser === "kota") {
-                // document.getElementById('form-three').style.display="none";
-                document.getElementById("one").innerHTML = `
+            }
+            if (strUser === "pileg" || strUser === "kota") {
+              // document.getElementById('form-three').style.display="none";
+              document.getElementById("one").innerHTML = `
                                                    <div class="select-display-one ">
                                                         <div class="form-group">
                                            
@@ -604,257 +633,269 @@ document.querySelector('#show').style.display= "block";
               
                                                 
                                                         `;
-              }
-            }
-          </script>
-        </div>
-        <div>
-          <div class="form-group" id="form-two">
-            <select class="form-control" id="exampleFormControlSelect2">
-              <option>Hitung Suara</option>
-              <option>Rekapitulasi Hasil Pemilu</option>
-              <option>Penetapan Hasil Pemilu</option>
-              <option>Daftar Sengketa</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <div class="form-group" id="form-three">
-            <select class="form-control" id="exampleFormControlSelect3">
-                <option>Nasional</option>
-              <option>ACEH</option>
-              <option>SUMTERA UTARA</option>
-              <option>SUMTERA BARAT</option>
-              <option>RIAU</option>
-              <option>JAMBI</option>
-            </select>
-          </div>
-        </div>
-        <div id="one"></div>
-      </div>
-    </form>
-    <div class="chart-style">
-     <div class="h3-control"> <p>HASIL HITUNG SUARA PEMILU</p><p> PRESIDEN & WAKIL PRESIDEN</p><p> RI 2019</p></div>
-      <p>TINGKAT NASIONAL</p>
-      <p>
-        Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS
-        (81.81361%)
-      </p>
-      <div class="con-size"><canvas id="myChart"></canvas>
-    <span class="left-text"><p>(01) Ir. H. JOKO WIDODO - Prof. Dr. (H.C)</p><p>KH. MA'RUF AMIN (56.31%)</p><p>Perolehan Suara: 69 993 678</p></span>
-    <span class="right-text"><p>(02) H. PRABOWO SUBIANTO - H. SANDIAGA</p><p>SALAHUDIN UNO (43.69%)</p><p>Perolehan Suara: 54 317 726</p></span>
-    </div>
-  </div>
-      <script>
-        var ctx = document.getElementById("myChart").getContext("2d");
-        var myChart = new Chart(ctx, {
-          type: "pie",
-          responsive: true,
-          data: {
-              
-            labels: ["#", "#"],
-            datasets: [
-              {
-                label: "hell",
-                data: [12, 19],
-                backgroundColor: ["rgb(142, 214, 255)",
-                 "rgb(255, 227, 176)"],
-               
-                // borderWidth: 1
-              }
-            ]
-          },
-          options: {
-              legend:{
-                  labels:{
-                      fontColor:'black'
-                  }
-              },
-            scales: {
-              
             }
           }
-        });
-        function updateChartType() {
-          let dataBaby = [1, 10];
-          let moreDataBaby = [20, 30];
-          
-          myData = {
-            labels: ["#", "#"],
-            datasets: [
-              //   {
-              //     label: "Data, baby!",
-              //     fill: false,
-              //     backgroundColor: 'rgb(190, 99, 255, 0.25)',
-              //     borderColor: 'rgb(190, 99, 255)',
-              //     data: dataBaby,
-              //   },
-              {
-                // label: "# of Votes",
-                data: [18, 19],
-                backgroundColor: ["rgb(142, 214, 255)", "rgb(255, 227, 176)"],
-                
-              }
-            ]
-          };
-          // if(myChart.type==="bar"){
-          //   console.log(myChart.type);
-          //   document.getElementsByClassName('right-text').style.display="none";
-          //   document.getElementsByClassName('right-text').style.backgroundColor="red";
-          // }
-          // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
-          myChart.destroy();
-          myChart = new Chart(ctx, {
-            type: document.getElementById("exampleFormControlSelect1").value,
-            data: myData
-          });
-          
-        }
-      </script>
-    
-    <div class="table-style table-responsive">
-      
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">WILAYAH</th>
-            <th scope="col">
-              (01) Ir.H.JOKO WIDODO-Pro.DR.(H.C) Kh MARUF AMIN
-            </th>
-            <th scope="col">(02) PRABOWO SUBIANTO-H.SANDIAGA SALAHUDIN UNO</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>  ACEH  (77,4%)</td>
-            <td> 320.767</td>
-            <td> 1.857.273</td>
-          </tr>
-          <tr>
-            <td>  SUMATERA UTARA (81,9%)</td>
-            <td> 3.267.405</td>
-            <td>  2.862.744</td>
-          </tr>
-          <tr>
-            <td> SUMATERA BARAT (92,6%)</td>
-            <td>  369.307</td>
-            <td>  2.309.826</td>
-          </tr>
-          <tr>
-            <td>   RIAU  (80,7%)</td>
-            <td>993.264</td>
-            <td> 1.612.197</td>
-          </tr>
-          <tr>
-            <td> JAMBI   (91%)</td>
-            <td>   794.423</td>
-            <td>1.080.199</td>
-          </tr>
-          <tr>
-            <td>   SUMATERA SELATAN  (82,1%)</td>
-            <td> 1.615.270</td>
-            <td> 2.353.279</td>
-          </tr>
-          <tr>
-            <td> BENGKULU  (100%)</td>
-            <td>      582.845</td>
-            <td> 585.598</td>
-          </tr>
-          <tr>
-            <td>   LAMPUNG    (92,8%)</td>
-            <td>     2.675.910</td>
-            <td> 1.783.853</td>
-          </tr>
-          <tr>
-            <td>  KEPULAUAN BANGKA BELITUNG  (100%)</td>
-            <td>      495.510</td>
-            <td>  288.097</td>
-          </tr>
-          <tr>
-            <td> KEPULAUAN RIAU  (86,5%)</td>
-            <td>      478.133</td>
-            <td>   397.086</td>
-          </tr>
-          <tr>
-            <td>  DKI JAKARTA   (63,5%)</td>
-            <td>       2.111.486</td>
-            <td>   1.905.768</td>
-          </tr>
-          <tr>
-            <td>    JAWA BARAT       (70,5%)</td>
-            <td>       7.794.817</td>
-            <td>  11.052.309</td>
-          </tr>
-          <tr>
-            <td>      JAWA TENGAH   (91,2%)</td>
-            <td>       15.324.096</td>
-            <td>   4.495.718</td>
-          </tr>
-          <tr>
-            <td>    DAERAH ISTIMEWA YOGYAKARTA      (94%)</td>
-            <td>      1.552.807</td>
-            <td>   693.149</td>
-          </tr>
-          <tr>
-            <td>     JAWA TIMUR         (83,9%)</td>
-            <td>     13.788.269</td>
-            <td>  6.871.399</td>
-          </tr>
-          <tr>
-            <td>       BANTEN        (69,6%)</td>
-            <td>    1.753.747</td>
-            <td> 2.817.102</td>
-          </tr>
-          <tr>
-            <td>        BALI                                  (100%)</td>
-            <td>      2.342.435</td>
-            <td>    212.577</td>
-          </tr>
-          
-        </tbody>
-      </table>
+        </script>
+      </div>
+      <div>
+        <div class="form-group" id="form-two">
+          <select class="form-control" id="exampleFormControlSelect2">
+            <option>Hitung Suara</option>
+            <option>Rekapitulasi Hasil Pemilu</option>
+            <option>Penetapan Hasil Pemilu</option>
+            <option>Daftar Sengketa</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="form-group" id="form-three">
+          <select class="form-control" id="exampleFormControlSelect3">
+            <option>Nasional</option>
+            <option>ACEH</option>
+            <option>SUMTERA UTARA</option>
+            <option>SUMTERA BARAT</option>
+            <option>RIAU</option>
+            <option>JAMBI</option>
+          </select>
+        </div>
+      </div>
+      <div id="one"></div>
     </div>
-   
-    <div class="dis-style">
-      <span>
+  </form>
+  <div class="chart-style">
+    <div class="h3-control">
+      <p>HASIL HITUNG SUARA PEMILU</p>
+      <p> PRESIDEN & WAKIL PRESIDEN</p>
+      <p> RI 2019</p>
+    </div>
+    <p>TINGKAT NASIONAL</p>
+    <p>
+      Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS (81.81361%)
+    </p>
+    <div class="con-size">
+      <canvas id="myChart"></canvas>
+      <span class="left-text">
+        <p>(01) Ir. H. JOKO WIDODO - Prof. Dr. (H.C)</p>
+        <p>KH. MA'RUF AMIN (56.31%)</p>
+        <p>Perolehan Suara: 69 993 678</p>
+      </span>
+      <span class="right-text">
+        <p>(02) H. PRABOWO SUBIANTO - H. SANDIAGA</p>
+        <p>SALAHUDIN UNO (43.69%)</p>
+        <p>Perolehan Suara: 54 317 726</p>
+      </span>
+    </div>
+  </div>
+  <script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "pie",
+      responsive: true,
+      data: {
+
+        labels: ["#", "#"],
+        datasets: [
+          {
+            label: "hell",
+            data: [12, 19],
+            backgroundColor: ["rgb(142, 214, 255)",
+              "rgb(255, 227, 176)"],
+
+            // borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: 'black'
+          }
+        },
+        scales: {
+
+        }
+      }
+    });
+    function updateChartType() {
+      let dataBaby = [1, 10];
+      let moreDataBaby = [20, 30];
+
+      myData = {
+        labels: ["#", "#"],
+        datasets: [
+          //   {
+          //     label: "Data, baby!",
+          //     fill: false,
+          //     backgroundColor: 'rgb(190, 99, 255, 0.25)',
+          //     borderColor: 'rgb(190, 99, 255)',
+          //     data: dataBaby,
+          //   },
+          {
+            // label: "# of Votes",
+            data: [18, 19],
+            backgroundColor: ["rgb(142, 214, 255)", "rgb(255, 227, 176)"],
+
+          }
+        ]
+      };
+      // if(myChart.type==="bar"){
+      //   console.log(myChart.type);
+      //   document.getElementsByClassName('right-text').style.display="none";
+      //   document.getElementsByClassName('right-text').style.backgroundColor="red";
+      // }
+      // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
+      myChart.destroy();
+      myChart = new Chart(ctx, {
+        type: document.getElementById("exampleFormControlSelect1").value,
+        data: myData
+      });
+
+    }
+  </script>
+
+  <div class="table-style table-responsive">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">WILAYAH</th>
+          <th scope="col">
+            (01) Ir.H.JOKO WIDODO-Pro.DR.(H.C) Kh MARUF AMIN
+          </th>
+          <th scope="col">(02) PRABOWO SUBIANTO-H.SANDIAGA SALAHUDIN UNO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> ACEH (77,4%)</td>
+          <td> 320.767</td>
+          <td> 1.857.273</td>
+        </tr>
+        <tr>
+          <td> SUMATERA UTARA (81,9%)</td>
+          <td> 3.267.405</td>
+          <td> 2.862.744</td>
+        </tr>
+        <tr>
+          <td> SUMATERA BARAT (92,6%)</td>
+          <td> 369.307</td>
+          <td> 2.309.826</td>
+        </tr>
+        <tr>
+          <td> RIAU (80,7%)</td>
+          <td>993.264</td>
+          <td> 1.612.197</td>
+        </tr>
+        <tr>
+          <td> JAMBI (91%)</td>
+          <td> 794.423</td>
+          <td>1.080.199</td>
+        </tr>
+        <tr>
+          <td> SUMATERA SELATAN (82,1%)</td>
+          <td> 1.615.270</td>
+          <td> 2.353.279</td>
+        </tr>
+        <tr>
+          <td> BENGKULU (100%)</td>
+          <td> 582.845</td>
+          <td> 585.598</td>
+        </tr>
+        <tr>
+          <td> LAMPUNG (92,8%)</td>
+          <td> 2.675.910</td>
+          <td> 1.783.853</td>
+        </tr>
+        <tr>
+          <td> KEPULAUAN BANGKA BELITUNG (100%)</td>
+          <td> 495.510</td>
+          <td> 288.097</td>
+        </tr>
+        <tr>
+          <td> KEPULAUAN RIAU (86,5%)</td>
+          <td> 478.133</td>
+          <td> 397.086</td>
+        </tr>
+        <tr>
+          <td> DKI JAKARTA (63,5%)</td>
+          <td> 2.111.486</td>
+          <td> 1.905.768</td>
+        </tr>
+        <tr>
+          <td> JAWA BARAT (70,5%)</td>
+          <td> 7.794.817</td>
+          <td> 11.052.309</td>
+        </tr>
+        <tr>
+          <td> JAWA TENGAH (91,2%)</td>
+          <td> 15.324.096</td>
+          <td> 4.495.718</td>
+        </tr>
+        <tr>
+          <td> DAERAH ISTIMEWA YOGYAKARTA (94%)</td>
+          <td> 1.552.807</td>
+          <td> 693.149</td>
+        </tr>
+        <tr>
+          <td> JAWA TIMUR (83,9%)</td>
+          <td> 13.788.269</td>
+          <td> 6.871.399</td>
+        </tr>
+        <tr>
+          <td> BANTEN (69,6%)</td>
+          <td> 1.753.747</td>
+          <td> 2.817.102</td>
+        </tr>
+        <tr>
+          <td> BALI (100%)</td>
+          <td> 2.342.435</td>
+          <td> 212.577</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dis-style">
+    <span>
       <div class="text-center">
         <h3>Disclaimer</h3>
       </div>
-      
-        <p>
-          1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg
-          disalin apa adanya/sesuai dengan angka yang tertulis pada Salinan
-          Formulir C1 yang diterima KPU Kabupaten/Kota dari KPPS
-        </p>
-        <p>
-          2.Apabila terdapat kekeliruan pengisian data pada Formulir C1, dapat
-          dilakukan perbaikan pada rapat pleno terbuka rekapitulasi di tingkat
-          kecamatan
-        </p>
-        <p>
-          3.Apabila terdapat perbedaan data antara entri di Situng dan Salinan
-          Formulir C1, akan dilakukan koreksi sesuai data yang tertulis di
-          Salinan Formulir C1.
-        </p>
-        <p>
-          4.Data yang ditampilkan di Situng bukan merupakan hasil resmi
-          penghitungan perolehan suara. Penetapan hasil rekapitulasi
-          penghitungan perolehan suara dilakukan secara berjenjang sesuai
-          tingkatannya dalam rapat pleno terbuk
-        </p>
-      </span>
-    </div>
-    <footer>
-      <h3>KONTAK</h3>
-      <span><hr /></span>
-      <p>Call Center 021 319 025 67/021 319 025 77</p>
-      <p>Whatsapp:024115444</p>
-      <p>email:jhasj@gmail.com</p>
-      <span><hr /></span>
-      <p>Mulai pukul 08.00-18.00</p>
+
       <p>
-        #KPUTransparan
+        1.Data entri yang ditampilkan pada Menu Hitung Suara adalah data yg disalin apa adanya/sesuai dengan angka yang tertulis
+        pada Salinan Formulir C1 yang diterima KPU Kabupaten/Kota dari KPPS
       </p>
-    </footer>
-  </body>
+      <p>
+        2.Apabila terdapat kekeliruan pengisian data pada Formulir C1, dapat dilakukan perbaikan pada rapat pleno terbuka rekapitulasi
+        di tingkat kecamatan
+      </p>
+      <p>
+        3.Apabila terdapat perbedaan data antara entri di Situng dan Salinan Formulir C1, akan dilakukan koreksi sesuai data yang
+        tertulis di Salinan Formulir C1.
+      </p>
+      <p>
+        4.Data yang ditampilkan di Situng bukan merupakan hasil resmi penghitungan perolehan suara. Penetapan hasil rekapitulasi
+        penghitungan perolehan suara dilakukan secara berjenjang sesuai tingkatannya dalam rapat pleno terbuk
+      </p>
+    </span>
+  </div>
+  <footer>
+    <h3>KONTAK</h3>
+    <span>
+      <hr />
+    </span>
+    <p>Call Center 021 319 025 67/021 319 025 77</p>
+    <p>Whatsapp:024115444</p>
+    <p>email:jhasj@gmail.com</p>
+    <span>
+      <hr />
+    </span>
+    <p>Mulai pukul 08.00-18.00</p>
+    <p>
+      #KPUTransparan
+    </p>
+  </footer>
+</body>
+
 </html>
