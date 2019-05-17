@@ -338,9 +338,27 @@ margin-top: 1rem;
           width: 300px;
         }
         .chart-style {
-          width: 90%;
-          margin-left: 1rem;
+       
+        height: 300px;
+        margin-left: 1rem;
+        width: 90%;
         
+        }
+        .h3-control{
+          margin-top: 0px;
+         
+          height: 10rem;
+          display: flex;
+          flex-direction: column
+
+        }
+        .h3-control>p{
+          margin: 0px;
+          font-weight: 500;
+          font-size: 1.1rem;
+        }
+        .chart-style > p:nth-child(3){
+          font-size: 0.5rem;
         }
         .dis-style {
           width: 90%;
@@ -418,11 +436,20 @@ margin-top: 1rem;
       }
       .right-text {
     
-    right: 8rem;
+        right: 15rem;
+    top: 31rem;
     
 }
+.right-text>p{
+  margin: 0px;
+}
 .left-text{
-    left: 10rem;
+  left: 17rem;
+    top: 37rem;
+
+}
+.left-text>p{
+  margin: 0px;
 }
 } 
      
@@ -560,7 +587,7 @@ margin-top: 1rem;
       </div>
     </form>
     <div class="chart-style">
-     <div class="h3-control"> <h3>HASIL HITUNG SUARA PEMILU PRESIDEN & WAKIL PRESIDEN RI 2019</h3></div>
+     <div class="h3-control"> <p>HASIL HITUNG SUARA PEMILU</p><p> PRESIDEN & WAKIL PRESIDEN</p><p> RI 2019</p></div>
       <p>TINGKAT NASIONAL</p>
       <p>
         Versi: 14 May 2019 19:00:05 Progress: 665.431 dari 813.350 TPS
@@ -570,6 +597,7 @@ margin-top: 1rem;
     <span class="left-text"><p>(01) Ir. H. JOKO WIDODO - Prof. Dr. (H.C)</p><p>KH. MA'RUF AMIN (56.31%)</p><p>Perolehan Suara: 69 993 678</p></span>
     <span class="right-text"><p>(02) H. PRABOWO SUBIANTO - H. SANDIAGA</p><p>SALAHUDIN UNO (43.69%)</p><p>Perolehan Suara: 54 317 726</p></span>
     </div>
+  </div>
       <script>
         var ctx = document.getElementById("myChart").getContext("2d");
         var myChart = new Chart(ctx, {
@@ -631,7 +659,7 @@ margin-top: 1rem;
           });
         }
       </script>
-    </div>
+    
     <div class="table-style table-responsive">
       
       <table class="table table-bordered">
